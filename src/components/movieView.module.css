@@ -1,0 +1,19 @@
+.container {
+	max-width: 20rem;
+	display: flex;
+	padding: 1% 1%;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.movie__title {
+	text-align: center;
+	max-width: 14rem;
+	font-weight: 600;
+}
+
+.movie__poster {
+	width: 14rem;
+	height: 20rem;
+	border-radius: 8%;
+}
