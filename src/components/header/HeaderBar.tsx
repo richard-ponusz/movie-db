@@ -1,6 +1,7 @@
-import styles from './headerBar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
+
+import styles from './headerBar.module.css';
 
 function HeaderBar() {
   return (

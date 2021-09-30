@@ -1,20 +1,23 @@
 import { Movie } from "../interfaces/types";
-import MockMovies from "../mock-data/movie/Movies.mock";
 import styles from "./movieList.module.css";
 import MovieView from "./MovieView";
 
-const MovieList = () => {
+const MovieList = ({ movies }: MovieListProps) => {
   const renderMovies = (): JSX.Element[] => {
-    return MockMovies.map((movie: Movie) => {
-      return <MovieView movieItem={movie} />
+    return movies.map((movie: Movie) => {
+      return <MovieView key={movie.id} movieItem={movie} />
     })
   }
 
   return (
     <div className={styles.container}>
-      {renderMovies()}
+      {movies ? renderMovies() : null}
     </div>
   )
+}
+
+type MovieListProps = {
+  movies: Movie[],
 }
 
 export default MovieList;
